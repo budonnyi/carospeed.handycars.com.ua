@@ -1,0 +1,51 @@
+Options +SymLinksIfOwnerMatch
+IndexIgnore */*
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !^/(web)
+
+RewriteRule ^favicon.ico$ /web/favicon.ico$1 [L]  
+RewriteRule ^robots.txt$ /web/robots.txt$1 [L] 
+RewriteRule ^sitemap.xml$ /web/sitemap.xml$1 [L]
+
+RewriteCond %{HTTP_HOST} ^www.carospeed\.handycars\.com\.ua$ [NC]
+RewriteRule ^(.*)$ https://carospeed.handycars.com.ua/$1 [R=301,L]
+
+RewriteRule ^assets/(.*)$ /web/assets/$1 [L]
+RewriteRule ^admin-assets/(.*)$ /web/admin-assets/$1 [L]
+RewriteRule ^favicons/(.*)$ /web/favicons/$1 [L]
+RewriteRule ^css/(.*)$ web/css/$1 [L]
+RewriteRule ^js/(.*)$ web/js/$1 [L]
+RewriteRule ^images/(.*)$ web/images/$1 [L]
+RewriteRule ^download/(.*)$ web/download/$1 [L]
+RewriteRule ^ru/download/(.*)$ web/download/$1 [L]
+RewriteRule ^ua/download/(.*)$ web/download/$1 [L]
+RewriteRule (.*) /web/$1
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /web/index.php
+
+# BEGIN EXPIRES
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresDefault                                      "access plus 6 month"
+
+ExpiresByType text/plain "access plus 6 month"
+ExpiresByType image/gif "access plus 6 month"
+ExpiresByType image/png "access plus 6 month"
+ExpiresByType image/jpeg "access plus 6 month"
+ExpiresByType application/x-icon "access plus 6 month"
+
+# CSS
+ExpiresByType text/css                              "access plus 1 year"
+
+# JavaScript
+ExpiresByType application/javascript                "access plus 1 year"
+ExpiresByType application/x-javascript              "access plus 1 year"
+ExpiresByType text/javascript                       "access plus 1 year"
+
+# Media files
+ExpiresByType image/jpeg                            "access plus 1 month"
+ExpiresByType image/png                             "access plus 1 month"
+
+</IfModule>
+# END EXPIRES

@@ -1,0 +1,30 @@
+.soflex1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    /*justify-content: space-between;*/
+}
+
+.footer-list-item {
+    width: 25%;
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 3px;
+}
+
+@media screen and (max-width: 880px) {
+    .footer-list-item {
+        width: 33.3%;
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer-list-item {
+        width: 50%;
+        font-size: 16px;
+        padding: 5px;
+    }
+}

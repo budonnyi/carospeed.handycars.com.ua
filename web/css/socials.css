@@ -1,0 +1,84 @@
+/*socials*/
+
+.chare-buttons-wrapper {
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.chare-buttons-wrapper .share-buttons-title {
+    font-size: 15px;
+    text-align: center;
+    font-weight: normal;
+    padding-bottom: 10px;
+}
+
+.chare-buttons-wrapper .share-buttons {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.chare-buttons-wrapper .share-buttons .share_social {
+    font-size: 13px;
+    padding-bottom: 10px;
+    font-weight: 700;
+}
+
+.chare-buttons-wrapper .share-buttons .share-block {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    transition: 0.5s;
+    margin-left: 10px;
+}
+
+.chare-buttons-wrapper .share-buttons .share-block .soc-icon-size {
+    width: 30px;
+}
+
+.chare-buttons-wrapper .share-buttons .whatsapp {
+    display: none;
+}
+
+.chare-buttons-wrapper .share-buttons .share-block:hover {
+    animation: share-animation 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    border-color: #0c7fd7;
+}
+
+@keyframes share-animation {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
+    30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+    40%, 60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+.chare-buttons-wrapper .share-buttons .share-value-wrapper {
+    margin-top: 10px;
+    padding-left: 30px;
+}
+
+.chare-buttons-wrapper .share-buttons .share-value-wrapper .share-value {
+    position: relative;
+}
+
+.chare-buttons-wrapper .share-buttons .share-value-wrapper .share-value:before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 18px;
+    height: 19px;
+    background-image: url("../img/icon/share.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    left: -26px;
+}
+
+/*end socials*/
