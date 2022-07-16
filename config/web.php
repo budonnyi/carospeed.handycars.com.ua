@@ -2,6 +2,7 @@
 
 $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
+$mailing = require(__DIR__ . '/mailing.php');
 
 Yii::setAlias('@components', dirname(__DIR__) . '/components');
 
@@ -37,18 +38,7 @@ $config = [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        'mailer' => [
-            'class' => 'yii\swiftmailer\Mailer',
-            'useFileTransport' => false,
-            'transport' => [
-                'class' => 'Swift_SmtpTransport',
-                'host' => 'mail.ukraine.com.ua',
-                'username' => 'info@handycars.com.ua',
-                'password' => 'GiJ6pUn1Dc66',
-                'port' => '465',
-                'encryption' => 'ssl',
-            ],
-        ],
+        'mailer' => $mailing,
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
