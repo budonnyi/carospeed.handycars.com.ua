@@ -315,7 +315,7 @@ $this->params['schema'] = \yii\helpers\Json::encode([
                                 <div class="borderline"></div>
                                 <img src="/assets/images/carospeed/car-7.jpg" width="400" height="400" alt="Carospeed Classic">
 
-                                <p class="price">28'000<span>грн</span>
+                                <p class="price">33'000<span>грн</span>
                                 </p>
                                 <ul class="price-details">
                                     <li><?= Yii::t('main', 'Ручное управление педалями газа и тормоза') ?>
@@ -335,7 +335,7 @@ $this->params['schema'] = \yii\helpers\Json::encode([
                                 <div class="borderline"></div>
                                 <img src="/assets/images/carospeed/car-9.jpg" width="400" height="400" alt="Carospeed Classic">
 
-                                <p class="price">28'000<span>грн</span>
+                                <p class="price">33'000<span>грн</span>
                                 </p>
                                 <ul class="price-details">
                                     <li><?= Yii::t('main', 'Ручное управление педалями газа и тормоза') ?>
@@ -354,7 +354,7 @@ $this->params['schema'] = \yii\helpers\Json::encode([
                                 <h4>Carospeed Classic E</h4>
                                 <div class="borderline"></div>
                                 <img src="/assets/images/carospeed/car-8.jpg" width="400" height="400" alt="Carospeed Classic">
-                                <p class="price">38'000<span>грн</span>
+                                <p class="price">41'000<span>грн</span>
                                 </p>
                                 <ul class="price-details">
                                     <li><?= Yii::t('main', 'Ручное управление педалями газа и тормоза') ?>

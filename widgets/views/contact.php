@@ -65,6 +65,20 @@ use yii\helpers\Html;
                 </div>
 
                 <?php ActiveForm::end(); ?>
+
+                <?php if (Yii::$app->session->hasFlash('success')): ?>
+                    <div class="alert alert-success alert-dismissable" role="alert">
+                        <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+                        <?= Yii::$app->session->getFlash('success') ?>
+                    </div>
+                <?php endif; ?>
+
+                <?php if (Yii::$app->session->hasFlash('error')): ?>
+                    <div class="alert alert-danger alert-dismissable" role="alert">
+                        <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+                        <?= Yii::$app->session->getFlash('error') ?>
+                    </div>
+                <?php endif; ?>
             </div>
         </div>
     </div>

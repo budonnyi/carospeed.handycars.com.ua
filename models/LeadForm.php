@@ -2,6 +2,7 @@
 
 namespace app\models;
 
+use app\models\Feedback;
 use Yii;
 
 /**
@@ -76,6 +77,14 @@ class LeadForm extends \yii\db\ActiveRecord
 
     public function sendEmail()
     {
+        $feedback = new Feedback();
+        $feedback->body = ($model->name ?? 'без имени') . "\n" . ($model->phone ?? 'без телефона') . "\n" . $this->message;
+        $feedback->email = $this->email;
+        $feedback->phone = $this->phone;
+        $feedback->ip = Yii::$app->request->userIP;
+        $feedback->is_blocked = true;
+        $feedback->save(false);
+
         return Yii::$app->mailer->compose('letter_feedback', [
             'model' => $this
         ])->setTo(['budonnyi@gmail.com', 'budonnaya@me.com'])
